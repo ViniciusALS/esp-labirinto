@@ -34,6 +34,8 @@ void Joystick::setup() {
   mpu.setAccDLPF(MPU6500_DLPF_6);
 
   Serial.println("MPU6500 encontrado!");
+
+  ligaLed();
 }
 
 void Joystick::ligaLed() {

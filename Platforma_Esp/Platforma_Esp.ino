@@ -52,7 +52,7 @@ void loop() {
   float posXE = joystickEsquerda.retornaPosicaoX();
   float posYE = joystickEsquerda.retornaPosicaoY();
 
-  // plataforma.moveParaPosicao(posXE, posYE);
+  plataforma.moveParaPosicao(posXD, posYE);
   printJoysticks(posXD, posYD, posXE, posYE);
   bluetooth.enviaPosicoes(posXD, posYD, posXE, posYE);
 }
