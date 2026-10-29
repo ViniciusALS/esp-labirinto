@@ -17,15 +17,17 @@ void Plataforma::setup() {
   motorX.setPeriodHertz(50);
   motorX.attach(motorXPin, 500, 2400);
 
-  motorX.setPeriodHertz(50);
+  motorY.setPeriodHertz(50);
   motorY.attach(motorYPin, 500, 2400);
+
+  moveParaPosicao(0, 0);
 }
 
 
-void Plataforma::movePlataformaParaAngulo(int valorX, int valorY) {
+void Plataforma::moveParaPosicao(int valorX, int valorY) {
   
   this->anguloX = map(valorX, -100, 100, minAnguloX, maxAnguloX);
-  this->anguloY = map(valorY, -100, 100, minAnguloY, maxAnguloY);
+  this->anguloY = map(-valorY, -100, 100, minAnguloY, maxAnguloY);
   
   motorX.write(anguloX);
   motorY.write(anguloY);

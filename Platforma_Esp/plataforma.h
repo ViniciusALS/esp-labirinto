@@ -12,7 +12,7 @@ class Plataforma {
 
     void setup();
 
-    void movePlataformaParaAngulo(int anguloX, int anguloY);
+    void moveParaPosicao(int anguloX, int anguloY);
 
 
   private:
@@ -28,9 +28,9 @@ class Plataforma {
     const int maxAnguloX = 125;
 
     int anguloY;
-    const int minAnguloY = 50;
+    const int minAnguloY = 45;
     // const int midAnguloY = 100;
-    const int maxAnguloY = 120;
+    const int maxAnguloY = 125;
 
 };
 
